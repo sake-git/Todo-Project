@@ -1,0 +1,19 @@
+<p *ngIf="todo" [ngClass]="{ strikeIt: todo.completed }" class="item-p">
+  {{ count + 1 }}.
+  <button *ngIf="!todo.completed" (click)="completeTask()" class="complete">
+    Complete
+  </button>
+  {{ todo.task }} ({{ todo.duration | number }} hr)
+  <span [ngSwitch]="todo.priority">
+    <span *ngSwitchCase="'High'" [class]="todo.priority">
+      &uarr; {{ todo.priority }}</span
+    >
+    <span *ngSwitchCase="'Low'" [class]="todo.priority">
+      &darr; {{ todo.priority }}</span
+    >
+    <span *ngSwitchCase="'Normal'" [class]="todo.priority">
+      &harr; {{ todo.priority }}</span
+    >
+  </span>
+  <button (click)="deleteTask()" class="delete-button">X</button>
+</p>

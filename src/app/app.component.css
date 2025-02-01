@@ -1,0 +1,90 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+}
+
+h1 {
+  text-align: center;
+}
+.main {
+  background: linear-gradient(to right, #f857a6, #ff5858);
+  padding: 30px 10px;
+  width: 550px;
+  margin: auto;
+}
+
+.innerDiv {
+  width: 400px;
+  background-color: white;
+  margin: auto;
+  padding: 10px;
+  top: 50px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5%;
+}
+
+.complete {
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  border-radius: 5%;
+}
+
+.item-p {
+  padding: 5px;
+  position: relative;
+}
+
+.delete-button {
+  right: 0px;
+  position: absolute;
+}
+
+.strikeIt {
+  text-decoration: line-through;
+}
+
+.High {
+  color: crimson;
+}
+.Low {
+  color: darkgoldenrod;
+}
+
+.Normal {
+  color: green;
+}
+
+form label {
+  padding: 5px;
+  margin: 5px;
+  font-weight: 250;
+}
+
+form {
+  outline: 2px solid blue;
+  padding: 10px;
+}
+
+input {
+  margin: 5px;
+}
+
+.no-task {
+  padding: 10px;
+  animation: testing 2s linear infinite;
+  width: 200px;
+  color: darkgreen;
+  margin: auto;
+  height: 50px;
+}
+
+@keyframes testing {
+  from {
+    font-size: small;
+    color: red;
+  }
+  to {
+    font-size: large;
+    color: darkgreen;
+  }
+}

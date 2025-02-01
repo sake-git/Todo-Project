@@ -1,0 +1,23 @@
+<div>
+  <form [formGroup]="myForm" (ngSubmit)="addItem(myForm)">
+    <div>
+      <label for="task">Enter a new task</label><br />
+      <input type="text" formControlName="task" />
+    </div>
+    <div>
+      <label for="duration">How many hours do you estimate?</label><br />
+      <input type="number" form="duration" formControlName="duration" />
+    </div>
+    <div>
+      <label id="priority">What is the priority level?</label><br />
+      <input type="radio" value="High" formControlName="priority" />
+      <label for="high">High</label>
+      <input type="radio" value="Normal" formControlName="priority" />
+      <label for normal>Normal</label>
+      <input type="radio" value="Low" formControlName="priority" />
+      <label for="low">Low</label>
+    </div>
+    <br />
+    <button type="Submit" [disabled]="myForm.invalid">Add</button>
+  </form>
+</div>

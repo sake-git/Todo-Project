@@ -1,15 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Todo } from '../model/todo';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css',
-  encapsulation: ViewEncapsulation.None,
+@Injectable({
+  providedIn: 'root',
 })
-export class AppComponent {
-  title = 'to-do-project';
+export class TodoServiceService {
   todos: Todo[];
   constructor() {
     this.todos = [
@@ -35,10 +30,5 @@ export class AppComponent {
 
   deleteTask(i: number) {
     this.todos.splice(i, 1);
-  }
-
-  addTask(todo: Todo) {
-    this.todos.push(todo);
-    console.log('in main component ');
   }
 }
